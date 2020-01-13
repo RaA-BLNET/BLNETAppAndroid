@@ -7,26 +7,26 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.blnet.blnettest.ui.home.HomeFragment"
+        android:name="com.blnet.blnettest.ui.home.homeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.blnet.blnettest.ui.gallery.GalleryFragment"
+        android:id="@+id/nav_send"
+        android:name="com.blnet.blnettest.ui.send.sendFragment"
         android:label="@string/menu_send"
         tools:layout="@layout/fragment_send" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.blnet.blnettest.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_infos"
+        android:name="com.blnet.blnettest.ui.infos.infosFragment"
         android:label="@string/menu_infos"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_infos" />
 
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.blnet.blnettest.ui.tools.ToolsFragment"
+        android:id="@+id/nav_calendar"
+        android:name="com.blnet.blnettest.ui.calendar.calendarFragment"
         android:label="@string/menu_calendar"
-        tools:layout="@layout/fragment_tools" />
+        tools:layout="@layout/fragment_calendar" />
 
 </navigation>

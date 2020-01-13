@@ -4,11 +4,11 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class homeViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public homeViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("Herzlich willkommen in der BLNET-App. Hier können sie ihre Schulnoten eintragen, schauen ob man Ämtli/Paketdienst hat und den BL-Kalender überprüfen.");
     }

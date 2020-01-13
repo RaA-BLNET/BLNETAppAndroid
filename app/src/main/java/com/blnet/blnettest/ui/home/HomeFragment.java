@@ -14,14 +14,14 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.blnet.blnettest.R;
 
-public class HomeFragment extends Fragment {
+public class homeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private homeViewModel homeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
+                ViewModelProviders.of(this).get(homeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         final TextView textView = root.findViewById(R.id.text_home);
         homeViewModel.getText().observe(this, new Observer<String>() {

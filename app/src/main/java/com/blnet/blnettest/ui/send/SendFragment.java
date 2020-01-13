@@ -14,14 +14,14 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.blnet.blnettest.R;
 
-public class SendFragment extends Fragment {
+public class sendFragment extends Fragment {
 
-    private SendViewModel sendViewModel;
+    private sendViewModel sendViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         sendViewModel =
-                ViewModelProviders.of(this).get(SendViewModel.class);
+                ViewModelProviders.of(this).get(sendViewModel.class);
         View root = inflater.inflate(R.layout.fragment_send, container, false);
         final TextView textView = root.findViewById(R.id.text_send);
         sendViewModel.getText().observe(this, new Observer<String>() {
