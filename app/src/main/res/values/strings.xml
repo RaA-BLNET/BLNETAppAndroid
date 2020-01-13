@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BLNET</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">BLNET App</string>
+    <string name="nav_header_subtitle">Alpha 0.0.4</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_login">Login</string>
+
+    <string name="menu_home">Startseite</string>
+    <string name="menu_send">Noten eintragen</string>
+    <string name="menu_infos">Wichtige Infos</string>
+    <string name="menu_calendar">Kalender</string>
+    <string name="text_home">Herzlich willkommen in der BLNET-App. Hier können sie ihre Schulnoten eintragen, schau ob man Ämtli/Paketdienst hat und den BL-Kalender überprüfen.</string>
+</resources>
