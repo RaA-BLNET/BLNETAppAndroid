@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -18,18 +20,26 @@ public class infosFragment extends Fragment {
 
     private infosViewModel infosViewModel;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        infosViewModel =
-                ViewModelProviders.of(this).get(infosViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_infos, container, false);
-        final TextView textView = root.findViewById(R.id.text_infos);
-        infosViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-        return root;
+    public class calendarFragment extends Fragment {
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View v = inflater.inflate(R.layout.fragment_calendar, container, false);
+            WebView webView = (WebView) v.findViewById(R.id.infos_html);
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.setWebViewClient(new WebViewClient() {
+                @Override
+                public void onPageFinished(WebView view, String url) {
+                    super.onPageFinished(view, url);
+                    view.loadUrl("javascript:(function() { " +
+                            "document.getElementById('masthead').style.display='none';})()");
+                    view.loadUrl("javascript:(function() { " +
+                            "document.getElementById('colophon').style.display='none';})()");
+                }
+            });
+            webView.loadUrl("https://www.blnet.ch/infos/");
+            return v;
+        }
     }
 }
