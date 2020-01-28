@@ -18,14 +18,10 @@ import com.blnet.blnettest.R;
 
 public class infosFragment extends Fragment {
 
-    private infosViewModel infosViewModel;
-
-    public class calendarFragment extends Fragment {
-
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View v = inflater.inflate(R.layout.fragment_calendar, container, false);
+            View v = inflater.inflate(R.layout.fragment_infos, container, false);
             WebView webView = (WebView) v.findViewById(R.id.infos_html);
             webView.getSettings().setJavaScriptEnabled(true);
             webView.setWebViewClient(new WebViewClient() {
@@ -42,4 +38,3 @@ public class infosFragment extends Fragment {
             return v;
         }
     }
-}
