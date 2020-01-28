@@ -10,7 +10,7 @@ public class homeViewModel extends ViewModel {
 
     public homeViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Herzlich willkommen in der BLNET-App. Hier können sie ihre Schulnoten eintragen, schauen ob man Ämtli/Paketdienst hat und den BL-Kalender überprüfen.");
+        mText.setValue("");
     }
 
     public LiveData<String> getText() {

@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -18,23 +16,20 @@ import com.blnet.blnettest.R;
 
 public class calendarFragment extends Fragment {
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_calendar, container, false);
-        WebView webView = (WebView) v.findViewById(R.id.calendar_html);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.setWebViewClient(new WebViewClient() {
+    private calendarViewModel calendarViewModel;
+
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        calendarViewModel =
+                ViewModelProviders.of(this).get(calendarViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_calendar, container, false);
+        final TextView textView = root.findViewById(R.id.text_calendar);
+        calendarViewModel.getText().observe(this, new Observer<String>() {
             @Override
-            public void onPageFinished(WebView view, String url) {
-                super.onPageFinished(view, url);
-                view.loadUrl("javascript:(function() { " +
-                        "document.getElementById('masthead').style.display='none';})()");
-                view.loadUrl("javascript:(function() { " +
-                        "document.getElementById('colophon').style.display='none';})()");
+            public void onChanged(@Nullable String s) {
+                textView.setText(s);
             }
         });
-        webView.loadUrl("https://www.blnet.ch/kalender/");
-        return v;
+        return root;
     }
 }
