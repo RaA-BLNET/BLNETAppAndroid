@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">BLNET</string>
+    <string name="app_name">blnet</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">BLNET App</string>
-    <string name="nav_header_subtitle">Alpha 0.0.4</string>
+    <string name="nav_header_title">blnet App</string>
+    <string name="nav_header_subtitle">Alpha 0.0.5</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_login">Login</string>
 
@@ -11,4 +11,13 @@
     <string name="menu_send">Noten eintragen</string>
     <string name="menu_infos">Wichtige Infos</string>
     <string name="menu_calendar">Kalender</string>
+    <string name="title_activity_login">Anmelden</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 </resources>
