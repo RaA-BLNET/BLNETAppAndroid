@@ -1,9 +1,10 @@
-package com.blnet.blnettest;
+package com.blnet.blnettest.ui;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+import com.blnet.blnettest.R;
 import com.blnet.blnettest.ui.ui.login.LoginActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
