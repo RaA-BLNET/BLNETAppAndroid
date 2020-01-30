@@ -3,7 +3,7 @@
     <string name="navigation_drawer_open">Navigation öffnen</string>
     <string name="navigation_drawer_close">Navigation schliessen</string>
     <string name="nav_header_title">blnet App</string>
-    <string name="nav_header_subtitle">Alpha 0.1.0</string>
+    <string name="nav_header_subtitle">Alpha 0.1.1</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_login">Anmelden</string>
 
@@ -12,7 +12,7 @@
     <string name="menu_infos">Wichtige Infos</string>
     <string name="menu_calendar">Kalender</string>
     <string name="title_activity_login">Anmelden</string>
-    <string name="prompt_email">E-Mail/Benutzername</string>
+    <string name="prompt_email">E-Mail</string>
     <string name="prompt_password">Passwort</string>
     <string name="action_sign_in">Anmelden</string>
     <string name="action_sign_in_short">Registrieren</string>
@@ -20,4 +20,8 @@
     <string name="invalid_username">Ungültiger Benutzername</string>
     <string name="invalid_password">Passwort muss min. 8 Zeichen haben</string>
     <string name="login_failed">Anmeldung fehlgeschlagen</string>
+    <string name="regprompt_email">E-Mail</string>
+    <string name="register">Registrieren</string>
+    <string name="regprompt_vorname">Vorname</string>
+    <string name="regprompt_nachname">Nachname</string>
 </resources>

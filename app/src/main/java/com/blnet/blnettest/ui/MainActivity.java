@@ -13,6 +13,8 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -79,19 +81,3 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 }
-//     protected void OnCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-//
-//        Button login = findViewById(R.id.action_login);
-//        login.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//               openLoginActivity();
-//            }
-//    });
-//}
-//public void openLoginActivity() {
-//        Intent intent = new Intent(this, LoginActivity.class);
-//        startActivity(intent);
-//}
