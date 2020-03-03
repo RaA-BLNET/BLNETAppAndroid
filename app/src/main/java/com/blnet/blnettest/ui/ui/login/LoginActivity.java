@@ -6,6 +6,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -50,7 +51,8 @@ public class LoginActivity extends AppCompatActivity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openRegister();
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
         });
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -64,9 +66,13 @@ public class LoginActivity extends AppCompatActivity {
                         try {
                         JSONObject jsonResponse = new JSONObject(response);
                         boolean success = jsonResponse.getBoolean("success");
-
                         if (success){
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            LoginActivity.this.startActivity(intent);
+                            Context context = getApplicationContext();
+                            CharSequence text = "Anmeldung erfolgreich";
+                            int duration = Toast.LENGTH_SHORT;
+                            Toast.makeText(context, text, duration).show();
                         }else{
                             AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                             builder.setMessage("Anmeldung fehlgeschlagen. Bitte überprüfen Sie die eingegebenen Daten.")
@@ -74,9 +80,9 @@ public class LoginActivity extends AppCompatActivity {
                                     .create()
                                     .show();
                         }
-                        }catch (JSONException e) {
-                        e.printStackTrace();
-                    }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
                 };
 
@@ -89,8 +95,4 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-    public void openRegister () {
-        Intent intent = new Intent(this, RegisterActivity.class);
-        startActivity(intent);
     }
-}

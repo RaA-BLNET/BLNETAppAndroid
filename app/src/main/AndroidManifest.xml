@@ -12,8 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.RegisterActivity"></activity>
-        <activity android:name="com.wibilea.blnetapp.RegisterActivity" />
+        <activity
+            android:name="com.blnet.blnettest.ui.RegisterActivity"
+            android:label="@string/register"
+            />
+        <activity
+            android:name=".ui.checkliste.checklisteFragment"
+            android:label="@string/menu_checkliste"
+            />
         <activity
             android:name=".ui.ui.login.LoginActivity"
             android:label="@string/title_activity_login" />

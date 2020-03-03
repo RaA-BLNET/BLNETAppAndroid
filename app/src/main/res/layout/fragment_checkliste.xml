@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.checkliste.checklisteFragment">
+
+    <TextView
+        android:id="@+id/text_checkliste"
+        android:layout_width="176dp"
+        android:layout_height="35dp"
+        android:text="@string/checkliste_text"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/ablagefach"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.382" />
+
+    <CheckBox
+        android:id="@+id/ablagefach"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:text="Ablagefach (BACK TO LE)"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/paketdienst"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:text="Monitore, PCs + Flipchart ausschalten"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.909" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:text="Altpapier entsorgen"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:text="Druckerpapier nachfüllen"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/paketdienst"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:text="Paketdienst"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/checkBox6"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:text="Fenster schliessen, Stühle an Tisch"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:text="Kühlschrank checken"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

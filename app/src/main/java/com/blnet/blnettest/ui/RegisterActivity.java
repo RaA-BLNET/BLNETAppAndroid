@@ -49,7 +49,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 JSONObject jsonResponse = new JSONObject(response);
                                 boolean success = jsonResponse.getBoolean("success");
 
-                                if (success){
+                                if (success) {
                                         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                         RegisterActivity.this.startActivity(intent);
                                 }else{
@@ -60,8 +60,8 @@ public class RegisterActivity extends AppCompatActivity {
                                             .show();
                                 }
                             } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
+                                    e.printStackTrace();
+                                }
                             }
                         };
 
