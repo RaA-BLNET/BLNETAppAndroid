@@ -2,6 +2,11 @@ package com.blnet.blnettest.ui.ui.login;
 
 import android.app.Activity;
 
+import android.os.Bundle;
+import android.util.Patterns;
+import android.view.View;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -16,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Patterns;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -31,13 +37,12 @@ import com.android.volley.toolbox.Volley;
 import com.blnet.blnettest.R;
 import com.blnet.blnettest.ui.MainActivity;
 import com.blnet.blnettest.ui.RegisterActivity;
-import com.blnet.blnettest.ui.RegisterRequest;
+import com.blnet.blnettest.ui.ui.login.LoginRequest;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,11 +71,13 @@ public class LoginActivity extends AppCompatActivity {
                         try {
                         JSONObject jsonResponse = new JSONObject(response);
                         boolean success = jsonResponse.getBoolean("success");
-                        if (success){
+                        if (success == true){
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             LoginActivity.this.startActivity(intent);
                             Context context = getApplicationContext();
-                            CharSequence text = "Anmeldung erfolgreich";
+                            String vorname = jsonResponse.getString("vorname");
+                            String nachname = jsonResponse.getString("nachname");
+                            CharSequence text = "Willkommen zurück, " + vorname + " " + nachname;
                             int duration = Toast.LENGTH_SHORT;
                             Toast.makeText(context, text, duration).show();
                         }else{

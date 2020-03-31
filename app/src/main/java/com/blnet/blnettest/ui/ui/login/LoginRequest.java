@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class LoginRequest extends StringRequest {
 
-    private static final String LOGIN_REQUEST_URL = "http://192.168.129.1/login.php";
+    private static final String LOGIN_REQUEST_URL = "https://tantegemmas.000webhostapp.com/androidlogin/login.php";
     private Map<String, String> params;
 
     public LoginRequest(String email, String passwort, Response.Listener<String> listener){

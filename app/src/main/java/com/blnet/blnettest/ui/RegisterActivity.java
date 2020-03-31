@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,7 +23,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     Button regButton;
     EditText regVorname, regNachname, regEMail, regPasswort;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,10 +49,10 @@ public class RegisterActivity extends AppCompatActivity {
                                 JSONObject jsonResponse = new JSONObject(response);
                                 boolean success = jsonResponse.getBoolean("success");
 
-                                if (success) {
-                                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                                        RegisterActivity.this.startActivity(intent);
-                                }else{
+                                if (success == true) {
+                                        Intent backintent = new Intent(RegisterActivity.this, LoginActivity.class);
+                                        RegisterActivity.this.startActivity(backintent);
+                                } else if (success == false){
                                     AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
                                     builder.setMessage("Registration fehlgeschlagen")
                                             .setNegativeButton("Erneut versuchen", null)
