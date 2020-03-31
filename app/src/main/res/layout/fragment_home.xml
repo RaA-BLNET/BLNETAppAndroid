@@ -37,13 +37,13 @@
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="277dp"
-            android:layout_height="151dp"
+            android:layout_width="276dp"
+            android:layout_height="226dp"
             android:layout_marginTop="16dp"
-            android:text="Herzlich willkommen in der blnet-App. Hier können sie ihre Schulnoten eintragen, schauen ob man Ämtli/Paketdienst hat und den BL-Kalender überprüfen."
+            android:text="Herzlich willkommen in der blnet-App. Hier können Sie ihre Schulnoten eintragen, schauen ob man Ämtli/Paketdienst, den BL-Kalender überprüfen, Ämtlis mit der Checkliste erleichtern und Push-Nachrichten bekommen wenn Sie etwas erleidigen müssen."
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.499"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
