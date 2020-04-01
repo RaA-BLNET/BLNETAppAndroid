@@ -72,8 +72,8 @@ public class LoginActivity extends AppCompatActivity {
                         JSONObject jsonResponse = new JSONObject(response);
                         boolean success = jsonResponse.getBoolean("success");
                         if (success == true){
-                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                            LoginActivity.this.startActivity(intent);
+                            Intent backintent = new Intent(LoginActivity.this, MainActivity.class);
+                            LoginActivity.this.startActivity(backintent);
                             Context context = getApplicationContext();
                             String vorname = jsonResponse.getString("vorname");
                             String nachname = jsonResponse.getString("nachname");
@@ -82,13 +82,18 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(context, text, duration).show();
                         }else{
                             AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                            builder.setMessage("Anmeldung fehlgeschlagen. Bitte überprüfen Sie die eingegebenen Daten.")
+                            builder.setMessage("Anmeldung fehlgeschlagen - Bitte überprüfen Sie die eingegebenen Daten.")
                                     .setNegativeButton("Erneut versuchen", null)
                                     .create()
                                     .show();
                         }
                         } catch (JSONException e) {
                             e.printStackTrace();
+                            AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                            builder.setMessage("Anmeldung fehlgeschlagen")
+                                    .setNegativeButton("Erneut versuchen", null)
+                                    .create()
+                                    .show();
                         }
                     }
                 };

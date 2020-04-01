@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.content.Context;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -52,15 +54,24 @@ public class RegisterActivity extends AppCompatActivity {
                                 if (success == true) {
                                         Intent backintent = new Intent(RegisterActivity.this, LoginActivity.class);
                                         RegisterActivity.this.startActivity(backintent);
+                                        Context context = getApplicationContext();
+                                        CharSequence text = "Registration erfolgreich";
+                                        int duration = Toast.LENGTH_SHORT;
+                                        Toast.makeText(context, text, duration).show();
                                 } else if (success == false){
                                     AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
-                                    builder.setMessage("Registration fehlgeschlagen")
+                                    builder.setMessage("Registration fehlgeschlagen - Die angegebene E-Mail Adresse existiert bereits in unserer Datenbank")
                                             .setNegativeButton("Erneut versuchen", null)
                                             .create()
                                             .show();
                                 }
                             } catch (JSONException e) {
                                     e.printStackTrace();
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
+                                    builder.setMessage("Registration fehlgeschlagen")
+                                            .setNegativeButton("Erneut versuchen", null)
+                                            .create()
+                                            .show();
                                 }
                             }
                         };
