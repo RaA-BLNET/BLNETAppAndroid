@@ -1,4 +1,4 @@
-package com.blnet.blnettest.ui;
+package com.blnet.blnettest.ui.register;
 
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;

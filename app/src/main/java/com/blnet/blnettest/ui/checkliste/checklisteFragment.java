@@ -1,4 +1,4 @@
-package com.blnet.blnettest.ui.checkliste;
+/* package com.blnet.blnettest.ui.checkliste;
 
         import android.content.Context;
         import android.content.Intent;
@@ -20,6 +20,7 @@ package com.blnet.blnettest.ui.checkliste;
         import android.widget.CheckBox;
         import android.widget.TextView;
 
+
         import com.blnet.blnettest.R;
 
         import static android.content.Context.MODE_PRIVATE;
@@ -28,10 +29,11 @@ package com.blnet.blnettest.ui.checkliste;
 public class checklisteFragment extends Fragment {
     private com.blnet.blnettest.ui.checkliste.checklisteViewModel checklisteViewModel;
 
+
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         checklisteViewModel =
                 ViewModelProviders.of(this).get(com.blnet.blnettest.ui.checkliste.checklisteViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_checkliste, container, false);
+        View root = inflater.inflate(R.layout.activity_checkliste, container, false);
         final TextView textView = root.findViewById(R.id.text_checkliste);
         checklisteViewModel.getText().observe(this, new Observer<String>() {
             @Override
@@ -41,11 +43,6 @@ public class checklisteFragment extends Fragment {
         });
         return root;
     }
-    //public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        //String chk1 = getString(R.id.ablagefach);
-        //SharedPreferences pref = getActivity().getPreferences(Context.MODE_PRIVATE);
-       // SharedPreferences.Editor edt = pref.edit();
-       // edt.putString("ablagefach", chk1);
-       // edt.commit();
-    //}
 }
+
+ */

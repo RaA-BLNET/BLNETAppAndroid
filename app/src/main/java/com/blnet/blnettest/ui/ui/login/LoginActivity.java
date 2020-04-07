@@ -1,43 +1,25 @@
 package com.blnet.blnettest.ui.ui.login;
 
-import android.app.Activity;
-
 import android.os.Bundle;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Patterns;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.blnet.blnettest.R;
 import com.blnet.blnettest.ui.MainActivity;
-import com.blnet.blnettest.ui.RegisterActivity;
-import com.blnet.blnettest.ui.ui.login.LoginRequest;
+import com.blnet.blnettest.ui.register.RegisterActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;

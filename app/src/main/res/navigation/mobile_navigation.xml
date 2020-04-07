@@ -29,10 +29,10 @@
         android:label="@string/menu_calendar"
         tools:layout="@layout/fragment_calendar" />
 
-    <fragment
+    <activity
         android:id="@+id/nav_checkliste"
-        android:name="com.blnet.blnettest.ui.checkliste.checklisteFragment"
+        android:name="com.blnet.blnettest.ui.checkliste.checklisteActivity"
         android:label="@string/menu_checkliste"
-        tools:layout="@layout/fragment_checkliste" />
+        tools:layout="@layout/activity_checkliste" />
 
 </navigation>

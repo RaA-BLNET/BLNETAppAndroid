@@ -13,16 +13,17 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.blnet.blnettest.ui.RegisterActivity"
+            android:name=".ui.register.RegisterActivity"
             android:label="@string/register"
-            />
+            android:parentActivityName = ".ui.ui.login.LoginActivity" />
         <activity
-            android:name=".ui.checkliste.checklisteFragment"
+            android:name=".ui.checkliste.checklisteActivity"
             android:label="@string/menu_checkliste"
-            />
+            android:parentActivityName = ".ui.MainActivity" />
         <activity
             android:name=".ui.ui.login.LoginActivity"
-            android:label="@string/title_activity_login" />
+            android:label="@string/title_activity_login"
+            android:parentActivityName = ".ui.MainActivity" />
         <activity
             android:name=".ui.MainActivity"
             android:label="@string/app_name"

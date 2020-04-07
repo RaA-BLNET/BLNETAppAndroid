@@ -1,19 +1,22 @@
 package com.blnet.blnettest.ui;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.blnet.blnettest.R;
-import com.blnet.blnettest.ui.ui.login.LoginActivity;
 
 import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.navigation.NavController;
+import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.blnet.blnettest.ui.checkliste.checklisteActivity;
+import com.blnet.blnettest.ui.ui.login.LoginActivity;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -23,8 +26,10 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 
+
 public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
+            @Override
+            public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
+                if (destination.getId() == R.id.nav_checkliste) {
+                    startActivity(new Intent(MainActivity.this, checklisteActivity.class));
+                }
+            }
+        });
     }
 
     @Override
@@ -65,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
             return true;
         }
-
         return false;
     }
 }
