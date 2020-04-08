@@ -1,7 +1,9 @@
 package com.blnet.blnettest.ui.ui.login;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -34,7 +36,6 @@ public class LoginActivity extends AppCompatActivity {
         final EditText passwort = (EditText) findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
         final Button registerButton = findViewById(R.id.registerlogin);
-
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,24 +52,39 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         try {
-                        JSONObject jsonResponse = new JSONObject(response);
-                        boolean success = jsonResponse.getBoolean("success");
-                        if (success == true){
-                            Intent backintent = new Intent(LoginActivity.this, MainActivity.class);
-                            LoginActivity.this.startActivity(backintent);
-                            Context context = getApplicationContext();
-                            String vorname = jsonResponse.getString("vorname");
-                            String nachname = jsonResponse.getString("nachname");
-                            CharSequence text = "Willkommen zurück, " + vorname + " " + nachname;
-                            int duration = Toast.LENGTH_SHORT;
-                            Toast.makeText(context, text, duration).show();
-                        }else{
-                            AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                            builder.setMessage("Anmeldung fehlgeschlagen - Bitte überprüfen Sie die eingegebenen Daten.")
-                                    .setNegativeButton("Erneut versuchen", null)
-                                    .create()
-                                    .show();
-                        }
+                            JSONObject jsonResponse = new JSONObject(response);
+                            boolean success = jsonResponse.getBoolean("success");
+                            if (success == true){
+                                Intent backintent = new Intent(LoginActivity.this, MainActivity.class);
+                                LoginActivity.this.startActivity(backintent);
+                                Context context = getApplicationContext();
+                                String vorname = jsonResponse.getString("vorname");
+                                String nachname = jsonResponse.getString("nachname");
+                                String email = jsonResponse.getString("email");
+                                // saving login credentials
+                                SharedPreferences spLogin = getSharedPreferences("loggedinuser", MODE_PRIVATE);
+                                // saving vorname + nachname
+                                SharedPreferences.Editor editor = getSharedPreferences("loggedinuser", MODE_PRIVATE).edit();
+                                editor.putString("vorname", vorname);
+                                editor.apply();
+                                editor = getSharedPreferences("loggedinuser", MODE_PRIVATE).edit();
+                                editor.putString("nachname", nachname);
+                                editor.apply();
+                                // saving email
+                                editor = getSharedPreferences("loggedinuser", MODE_PRIVATE).edit();
+                                editor.putString("email", email);
+                                editor.apply();
+                                // toast login confirmation
+                                CharSequence text = "Willkommen zurück, " + vorname + " " + nachname;
+                                int duration = Toast.LENGTH_SHORT;
+                                Toast.makeText(context, text, duration).show();
+                            }else{
+                                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                                builder.setMessage("Anmeldung fehlgeschlagen - Bitte überprüfen Sie die eingegebenen Daten.")
+                                        .setNegativeButton("Erneut versuchen", null)
+                                        .create()
+                                        .show();
+                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
                             AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
@@ -84,9 +100,14 @@ public class LoginActivity extends AppCompatActivity {
                 LoginRequest loginRequest = new LoginRequest(username, password, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
                 queue.add(loginRequest);
-
-
             }
         });
+
+        SharedPreferences spLogin = getSharedPreferences("loggedinuser", MODE_PRIVATE);
+        String vornameiden = spLogin.getString("vorname", null);
+        String nachnameiden = spLogin.getString("nachname", null);
+        String emailiden = spLogin.getString("email", null);
+        email.setText(emailiden);
+
     }
-    }
+}

@@ -11,6 +11,9 @@ import androidx.navigation.ui.AppBarConfiguration;
 
 import com.blnet.blnettest.R;
 
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
 import static android.content.Context.MODE_PRIVATE;
 public class checklisteActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
@@ -33,34 +36,30 @@ public class checklisteActivity extends AppCompatActivity {
         chk5 = findViewById(R.id.altpapier);
         chk6 = findViewById(R.id.kuehl);
         chk7 = findViewById(R.id.monitor);
-        SharedPreferences sharedPreferences1 = getSharedPreferences("save1", MODE_PRIVATE);
-        SharedPreferences sharedPreferences2 = getSharedPreferences("save2", MODE_PRIVATE);
-        SharedPreferences sharedPreferences3 = getSharedPreferences("save3", MODE_PRIVATE);
-        SharedPreferences sharedPreferences4 = getSharedPreferences("save4", MODE_PRIVATE);
-        SharedPreferences sharedPreferences5 = getSharedPreferences("save5", MODE_PRIVATE);
-        SharedPreferences sharedPreferences6 = getSharedPreferences("save6", MODE_PRIVATE);
-        SharedPreferences sharedPreferences7 = getSharedPreferences("save7", MODE_PRIVATE);
 
+        SharedPreferences spCheckliste = getSharedPreferences("save", MODE_PRIVATE);
 
-        chk1.setChecked(sharedPreferences1.getBoolean("value1", false));
-        chk2.setChecked(sharedPreferences2.getBoolean("value2", false));
-        chk3.setChecked(sharedPreferences3.getBoolean("value3", false));
-        chk4.setChecked(sharedPreferences4.getBoolean("value4", false));
-        chk5.setChecked(sharedPreferences5.getBoolean("value5", false));
-        chk6.setChecked(sharedPreferences6.getBoolean("value6", false));
-        chk7.setChecked(sharedPreferences7.getBoolean("value7", false));
+        chk1.setChecked(spCheckliste.getBoolean("ablagefach", false));
+        chk2.setChecked(spCheckliste.getBoolean("paketdienst", false));
+        chk3.setChecked(spCheckliste.getBoolean("fenster", false));
+        chk4.setChecked(spCheckliste.getBoolean("drucker", false));
+        chk5.setChecked(spCheckliste.getBoolean("altpapier", false));
+        chk6.setChecked(spCheckliste.getBoolean("kuehl", false));
+        chk7.setChecked(spCheckliste.getBoolean("monitor", false));
 
         chk1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (chk1.isChecked()) {
-                    SharedPreferences.Editor editor = getSharedPreferences("save1", MODE_PRIVATE).edit();
-                    editor.putBoolean("value1", true);
+                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                    editor.putBoolean("ablagefach", true);
+                    editor.putLong("loeschennach", System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(720));
                     editor.apply();
                     chk1.setChecked(true);
                 } else {
-                    SharedPreferences.Editor editor = getSharedPreferences("save1", MODE_PRIVATE).edit();
-                    editor.putBoolean("value1", false);
+                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                    editor.putBoolean("ablagefach", false);
+                    editor.putLong("loeschennach", System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(720));
                     editor.apply();
                     chk1.setChecked(false);
                 }
@@ -70,13 +69,15 @@ public class checklisteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (chk2.isChecked()) {
-                    SharedPreferences.Editor editor = getSharedPreferences("save2", MODE_PRIVATE).edit();
-                    editor.putBoolean("value2", true);
+                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                    editor.putBoolean("paketdienst", true);
+                    editor.putLong("loeschennach", System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(720));
                     editor.apply();
                     chk2.setChecked(true);
                 } else {
-                    SharedPreferences.Editor editor = getSharedPreferences("save2", MODE_PRIVATE).edit();
-                    editor.putBoolean("value2", false);
+                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                    editor.putBoolean("paketdienst", false);
+                    editor.putLong("loeschennach", System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(720));
                     editor.apply();
                     chk2.setChecked(false);
                 }
@@ -86,13 +87,15 @@ public class checklisteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (chk3.isChecked()) {
-                    SharedPreferences.Editor editor = getSharedPreferences("save3", MODE_PRIVATE).edit();
-                    editor.putBoolean("value3", true);
+                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                    editor.putBoolean("fenster", true);
+                    editor.putLong("loeschennach", System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(720));
                     editor.apply();
                     chk3.setChecked(true);
                 } else {
-                    SharedPreferences.Editor editor = getSharedPreferences("save3", MODE_PRIVATE).edit();
-                    editor.putBoolean("value3", false);
+                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                    editor.putBoolean("fenster", false);
+                    editor.putLong("loeschennach", System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(720));
                     editor.apply();
                     chk3.setChecked(false);
                 }
@@ -102,13 +105,15 @@ public class checklisteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (chk4.isChecked()) {
-                    SharedPreferences.Editor editor = getSharedPreferences("save4", MODE_PRIVATE).edit();
-                    editor.putBoolean("value4", true);
+                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                    editor.putBoolean("drucker", true);
+                    editor.putLong("loeschennach", System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(720));
                     editor.apply();
                     chk4.setChecked(true);
                 } else {
-                    SharedPreferences.Editor editor = getSharedPreferences("save4", MODE_PRIVATE).edit();
-                    editor.putBoolean("value4", false);
+                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                    editor.putBoolean("drucker", false);
+                    editor.putLong("loeschennach", System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(720));
                     editor.apply();
                     chk4.setChecked(false);
                 }
@@ -118,13 +123,15 @@ public class checklisteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (chk5.isChecked()) {
-                    SharedPreferences.Editor editor = getSharedPreferences("save5", MODE_PRIVATE).edit();
-                    editor.putBoolean("value5", true);
+                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                    editor.putBoolean("altpapier", true);
+                    editor.putLong("loeschennach", System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(720));
                     editor.apply();
                     chk5.setChecked(true);
                 } else {
-                    SharedPreferences.Editor editor = getSharedPreferences("save5", MODE_PRIVATE).edit();
-                    editor.putBoolean("value5", false);
+                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                    editor.putBoolean("altpapier", false);
+                    editor.putLong("loeschennach", System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(720));
                     editor.apply();
                     chk5.setChecked(false);
                 }
@@ -134,13 +141,15 @@ public class checklisteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (chk6.isChecked()) {
-                    SharedPreferences.Editor editor = getSharedPreferences("save6", MODE_PRIVATE).edit();
-                    editor.putBoolean("value6", true);
+                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                    editor.putBoolean("kuehl", true);
+                    editor.putLong("loeschennach", System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(720));
                     editor.apply();
                     chk6.setChecked(true);
                 } else {
-                    SharedPreferences.Editor editor = getSharedPreferences("save6", MODE_PRIVATE).edit();
-                    editor.putBoolean("value6", false);
+                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                    editor.putBoolean("kuehl", false);
+                    editor.putLong("loeschennach", System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(720));
                     editor.apply();
                     chk6.setChecked(false);
                 }
@@ -150,18 +159,24 @@ public class checklisteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (chk7.isChecked()) {
-                    SharedPreferences.Editor editor = getSharedPreferences("save7", MODE_PRIVATE).edit();
-                    editor.putBoolean("value7", true);
+                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                    editor.putBoolean("monitor", true);
+                    editor.putLong("loeschennach", System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(720));
                     editor.apply();
                     chk7.setChecked(true);
                 } else {
-                    SharedPreferences.Editor editor = getSharedPreferences("save7", MODE_PRIVATE).edit();
-                    editor.putBoolean("value7", false);
+                    SharedPreferences.Editor editor = getSharedPreferences("save", MODE_PRIVATE).edit();
+                    editor.putBoolean("monitor", false);
+                    editor.putLong("loeschennach", System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(720));
                     editor.apply();
                     chk7.setChecked(false);
                 }
             }
         });
-
+        if (!(spCheckliste.getLong("loeschennach", -1) > System.currentTimeMillis())) {
+            SharedPreferences.Editor editor = spCheckliste.edit();
+            editor.clear();
+            editor.apply();
+        }
+        }
     }
-}
