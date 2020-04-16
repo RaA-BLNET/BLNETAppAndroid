@@ -1,18 +1,22 @@
+<!-- static text can be found here -->
 <resources>
+    <!-- general stuff -->
     <string name="app_name">blnet</string>
     <string name="navigation_drawer_open">Navigation öffnen</string>
     <string name="navigation_drawer_close">Navigation schliessen</string>
     <string name="nav_header_title">blnet App</string>
-    <string name="nav_header_subtitle">Alpha 0.2.3</string>
+    <string name="nav_header_subtitle">Alpha 0.3.0</string>
     <string name="nav_header_desc">Navigation header</string>
+    <!-- Navigation -->
     <string name="action_login">Anmelden</string>
-
+    <string name="action_register">Registrieren</string>
     <string name="menu_home">Startseite</string>
     <string name="menu_send">Noten eintragen</string>
     <string name="menu_infos">Wichtige Infos</string>
     <string name="menu_calendar">Kalender</string>
     <string name="menu_checkliste">Ämtli-Checkliste</string>
     <string name="title_activity_login">Anmelden</string>
+
     <string name="prompt_email">E-Mail</string>
     <string name="prompt_password">Passwort</string>
     <string name="action_sign_in">Anmelden</string>
@@ -26,4 +30,12 @@
     <string name="regprompt_vorname">Vorname</string>
     <string name="regprompt_nachname">Nachname</string>
     <string name="checkliste_text">Ämtli-Checkliste</string>
+    <!-- Notenformular -->
+    <string name="descSend1">Vorgehensweise</string>
+    <string name="descSend2">1. Bei Erhalt einer Note ist diese im Formular einzutragen.</string>
+    <string name="descSend3">2. Wenn die Note ungenügend ist, ist eine Begründung anzugeben, weshalb die Note so ausgefallen ist.</string>
+    <string name="descSend4">3. Auf den Button &quot;Absenden&quot; klicken. → E-Mail an Berufsbildner wird ausgelöst.</string>
+    <string name="descSend5">* → erforderlich</string>
+    <string name="descSend6">Note-E: Noten die effektiv zu 100% gelten</string>
+    <string name="descSend7">Note-A: Noten die bei Kurztests oder zum Aufrunden benötigt werden</string>
 </resources>

@@ -2,6 +2,7 @@ package com.blnet.blnettest.ui;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import com.blnet.blnettest.R;
@@ -10,6 +11,7 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
@@ -17,6 +19,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.blnet.blnettest.ui.checkliste.checklisteActivity;
+import com.blnet.blnettest.ui.register.RegisterActivity;
 import com.blnet.blnettest.ui.ui.login.LoginActivity;
 import com.google.android.material.navigation.NavigationView;
 
@@ -26,7 +29,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
-import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -58,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        SharedPreferences spLogin = getSharedPreferences("loggedinuser", MODE_PRIVATE);
+        final String emailiden = spLogin.getString("email", null);
     }
 
     @Override
@@ -77,6 +81,9 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.action_login) {
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            return true;
+        } else if (id == R.id.action_register) {
+            startActivity(new Intent(MainActivity.this, RegisterActivity.class));
             return true;
         }
         return false;

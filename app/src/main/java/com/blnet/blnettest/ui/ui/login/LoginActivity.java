@@ -104,9 +104,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         SharedPreferences spLogin = getSharedPreferences("loggedinuser", MODE_PRIVATE);
-        String vornameiden = spLogin.getString("vorname", null);
-        String nachnameiden = spLogin.getString("nachname", null);
-        String emailiden = spLogin.getString("email", null);
+        final String emailiden = spLogin.getString("email", null);
         email.setText(emailiden);
 
     }

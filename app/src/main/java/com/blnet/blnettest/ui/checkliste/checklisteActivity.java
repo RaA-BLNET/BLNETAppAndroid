@@ -1,15 +1,24 @@
 package com.blnet.blnettest.ui.checkliste;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.ui.AppBarConfiguration;
 
 import com.blnet.blnettest.R;
+import com.blnet.blnettest.ui.MainActivity;
+import com.blnet.blnettest.ui.register.RegisterActivity;
+import com.blnet.blnettest.ui.ui.login.LoginActivity;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -179,4 +188,21 @@ public class checklisteActivity extends AppCompatActivity {
             editor.apply();
         }
         }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_login) {
+            startActivity(new Intent(checklisteActivity.this, LoginActivity.class));
+            return true;
+        } else if (id == R.id.action_register) {
+            startActivity(new Intent(checklisteActivity.this, RegisterActivity.class));
+            return true;
+        }
+        return false;
+    }
     }
