@@ -2,7 +2,6 @@ package com.blnet.blnettest.ui;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import com.blnet.blnettest.R;
@@ -11,17 +10,19 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
+
 import androidx.navigation.ui.NavigationUI;
 
-import com.blnet.blnettest.ui.checkliste.checklisteActivity;
+import com.blnet.blnettest.ui.checkliste.checklisteFragment;
+import com.blnet.blnettest.ui.pwreset.pwresetActivity;
 import com.blnet.blnettest.ui.register.RegisterActivity;
-import com.blnet.blnettest.ui.ui.login.LoginActivity;
+import com.blnet.blnettest.ui.login.LoginActivity;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -33,12 +34,17 @@ import android.view.Menu;
 
 public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
+    private FirebaseAnalytics firebaseUserPush;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        firebaseUserPush = FirebaseAnalytics.getInstance(this);
+        SharedPreferences spLogin = getSharedPreferences("loggedinuser", MODE_PRIVATE);
+        String emailiden = spLogin.getString("email", "");
+        firebaseUserPush.setUserProperty("email", emailiden);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -51,17 +57,6 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-
-        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
-            @Override
-            public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
-                if (destination.getId() == R.id.nav_checkliste) {
-                    startActivity(new Intent(MainActivity.this, checklisteActivity.class));
-                }
-            }
-        });
-        SharedPreferences spLogin = getSharedPreferences("loggedinuser", MODE_PRIVATE);
-        final String emailiden = spLogin.getString("email", null);
     }
 
     @Override
@@ -85,7 +80,10 @@ public class MainActivity extends AppCompatActivity {
         } else if (id == R.id.action_register) {
             startActivity(new Intent(MainActivity.this, RegisterActivity.class));
             return true;
+        } else if (id == R.id.action_pwreset) {
+            startActivity(new Intent(MainActivity.this, pwresetActivity.class));
         }
         return false;
     }
+
 }

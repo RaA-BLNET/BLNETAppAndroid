@@ -9,4 +9,8 @@
         android:id="@+id/action_register"
         android:orderInCategory="100"
         android:title="@string/action_register"/>
+    <item
+        android:id="@+id/action_pwreset"
+        android:orderInCategory="100"
+        android:title="@string/action_pwreset"/>
 </menu>

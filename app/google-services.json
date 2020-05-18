@@ -8,12 +8,57 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:254820726262:android:6223ec36bc7ba4293703d7",
+        "android_client_info": {
+          "package_name": "com.blnet.blnettest.ui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254820726262-sksfefpma0eaqp2nr33dq0sklnuc8pil.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXj-CtVTmMmtfF_Y68NYbmUCiQmgMKwwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254820726262-sksfefpma0eaqp2nr33dq0sklnuc8pil.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:254820726262:android:7568f834edfbd67b3703d7",
         "android_client_info": {
           "package_name": "com.wibilea.blnetapp"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "254820726262-s3no147gu2glc3ivk9dgqbt824kfh5ir.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wibilea.blnetapp",
+            "certificate_hash": "c97755cf3320c426e4de6503ae32f6cc785555b3"
+          }
+        },
+        {
+          "client_id": "254820726262-b5d8ogceqjdvefan5n2q83alcrgsotjp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wibilea.blnetapp",
+            "certificate_hash": "f9629fd9a7ffd740da48473dbc013639552c66f4"
+          }
+        },
         {
           "client_id": "254820726262-sksfefpma0eaqp2nr33dq0sklnuc8pil.apps.googleusercontent.com",
           "client_type": 3

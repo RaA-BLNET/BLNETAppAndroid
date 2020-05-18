@@ -5,31 +5,72 @@
     <string name="navigation_drawer_open">Navigation öffnen</string>
     <string name="navigation_drawer_close">Navigation schliessen</string>
     <string name="nav_header_title">blnet App</string>
-    <string name="nav_header_subtitle">Alpha 0.3.0</string>
+    <string name="nav_header_subtitle">Beta 0.5.0</string>
     <string name="nav_header_desc">Navigation header</string>
+    <string name="error">Fehler</string>
+    <!-- Homepage -->
+    <string name="checklisteintrotext">Herzlich willkommen in der blnet-App. Hier können Sie ihre Schulnoten eintragen, schauen ob man Ämtli/Paketdienst, den BL-Kalender überprüfen, Ämtlis und Putzdienst mit der Checkliste erleichtern und Push-Nachrichten bekommen wenn Sie etwas erleidigen müssen.</string>
+    <string name="bl1">Alessandro Basile</string>
+    <string name="bl2">Nicola Pettikoffer</string>
+    <string name="bl3">Till Gasser</string>
+    <string name="bl4">Valdrin Useini</string>
+    <string name="bl5">Noel Wangler</string>
+    <string name="bl6">Ian Hild</string>
+    <string name="bl7">Abeeraam Rahunenthiran</string>
+    <string name="br1">Gianni Provenzano</string>
+    <string name="br2">Rubén Fructuoso</string>
     <!-- Navigation -->
     <string name="action_login">Anmelden</string>
     <string name="action_register">Registrieren</string>
+    <string name="action_pwreset">Passwort zurücksetzen</string>
     <string name="menu_home">Startseite</string>
-    <string name="menu_send">Noten eintragen</string>
+    <string name="menu_send">Notenformular</string>
     <string name="menu_infos">Wichtige Infos</string>
     <string name="menu_calendar">Kalender</string>
-    <string name="menu_checkliste">Ämtli-Checkliste</string>
+    <string name="menu_checkliste">Checklisten</string>
     <string name="title_activity_login">Anmelden</string>
-
+    <!-- Login -->
     <string name="prompt_email">E-Mail</string>
     <string name="prompt_password">Passwort</string>
     <string name="action_sign_in">Anmelden</string>
-    <string name="action_sign_in_short">Registrieren</string>
-    <string name="welcome">"Willkommen "</string>
+    <string name="welcome">Willkommen zurück,</string>
     <string name="invalid_username">Ungültiger Benutzername</string>
     <string name="invalid_password">Passwort muss min. 8 Zeichen haben</string>
-    <string name="login_failed">Anmeldung fehlgeschlagen</string>
+    <string name="login_failed">Anmeldung fehlgeschlagen - Bitte überprüfen Sie die eingegebenen Daten.</string>
+    <string name="jsonexceptlogin">Anmeldung fehlgeschlagen - Bitte überprüfen Sie ihre Internetverbindung</string>
+    <string name="jsonexceptreg">Registration fehlgeschlagen - Bitte überprüfen Sie ihre Internetverbindung</string>
+    <string name="tryagainlogin">Erneut versuchen</string>
+    <string name="regsuccess">Registration erfolgreich</string>
+    <string name="regfail">Registration fehlgeschlagen - Die angegebene E-Mail Adresse existiert bereits in unserer Datenbank</string>
     <string name="regprompt_email">E-Mail</string>
     <string name="register">Registrieren</string>
     <string name="regprompt_vorname">Vorname</string>
     <string name="regprompt_nachname">Nachname</string>
+    <string name="notempty">Dieses Feld darf nicht leer sein</string>
+    <string name="passwordsec">Passwort muss mindestens 8 Zeichen haben</string>
+    <string name="validemail">Bitte geben sie eine gültige E-Mail Adresse ein</string>
+    <!-- Passwort Reseter -->
+    <string name="pwremail">E-Mail</string>
+    <string name="pwroldpass">Altes Passwort</string>
+    <string name="pwrnewpass">Neues Passwort</string>
+    <string name="pwrnewpassconf">Neues Passwort bestätigen</string>
+    <string name="pwnotequal">Passwörter stimmen nicht übereinander</string>
+    <string name="resetbutton">Zurücksetzen</string>
+    <string name="wrongemailoldpwd">Passwortänderung fehlgeschlagen - Bitte überprüfen Sie die E-Mail Adresse und das alte Passwort</string>
+    <string name="neterror">Passwortänderung fehlgeschlagen - Bitte überprüfen Sie ihre Internetverbindung</string>
+    <string name="successchange">Das Passwort wurde erfolgreich geändert.</string>
+    <!-- Checkliste -->
     <string name="checkliste_text">Ämtli-Checkliste</string>
+    <string name="checkliste1">Ablagefach (BACK TO LE)</string>
+    <string name="checkliste2">Monitore, PCs + Flipchart ausschalten</string>
+    <string name="checkliste3">Altpapier entsorgen</string>
+    <string name="checkliste4">Druckerpapier nachfüllen</string>
+    <string name="checkliste5">Paketdienst</string>
+    <string name="checkliste6">Fenster schliessen, Stühle an Tisch</string>
+    <string name="checkliste7">Kühlschrank checken</string>
+    <!-- Kalender -->
+    <string name="infocal">Drehen Sie Ihr Handy um den Kalender zu sehen</string>
+    <string name="titlecal">Information</string>
     <!-- Notenformular -->
     <string name="descSend1">Vorgehensweise</string>
     <string name="descSend2">1. Bei Erhalt einer Note ist diese im Formular einzutragen.</string>
@@ -38,4 +79,105 @@
     <string name="descSend5">* → erforderlich</string>
     <string name="descSend6">Note-E: Noten die effektiv zu 100% gelten</string>
     <string name="descSend7">Note-A: Noten die bei Kurztests oder zum Aufrunden benötigt werden</string>
+    <string name="hintdate">Datum* (dd.mm.yyyy)</string>
+    <string name="hintnote">Note*</string>
+    <string name="hintbegr">Begründung &lt;4.0</string>
+    <string name="submitbutton">Absenden</string>
+    <string name="notetabbutton">Notentabelle</string>
+    <string name="norights">Ihr Konto hat keine Berechtigung für dieses Feature</string>
+    <string name="concatnoteformtitle">Notenformular</string>
+    <string name="jsonexceptsend">Ein Fehler ist aufgetreten. Entweder sind Sie nicht angemeldet oder Sie haben keine Berechtigung auf dieses Feature.</string>
+    <string name="nouser">Sie müssen sich anmelden, um das Notenformular benutzen zu können</string>
+    <string name="successsend">Das Formular wurde erfolgreich abgeschickt</string>
+    <string name="notefail">Das Formular konnte nicht abgeschickt werden. Bitte überprüfen Sie ihre Internetverbindung.</string>
+    <string-array name="noten">
+        <item>Bitte auswählen*</item>
+        <item>Deutsch</item>
+        <item>Englisch</item>
+        <item>Französisch</item>
+        <item>Geschichte und Politik</item>
+        <item>Gesellschaft</item>
+        <item>IDAF</item>
+        <item>INF-Schulmodule</item>
+        <item>Mathematik Grundlagen</item>
+        <item>Mathematik Schwerpunkt</item>
+        <item>Naturwissenschaften</item>
+        <item>NW I - Physik</item>
+        <item>NW II - Chemie</item>
+        <item>Sportunterricht</item>
+        <item>Sprache &amp; Kommunikation</item>
+        <item>Wirtschaft &amp; Recht</item>
+    </string-array>
+    <!-- Fehlermeldungen Validierung -->
+    <string name="dateerror">Bitte gültiges Datum eingeben</string>
+    <string name="facherror">Bitte etwas anderes wählen</string>
+    <string name="themaerror">Bitte das Thema angeben</string>
+    <string name="noteerror">Bitte die Note eingeben</string>
+    <string name="notetypeerror">Bitte wählen</string>
+    <string name="begrerror">Eine Begründung ist bei Noten unter 4.0 notwendig</string>
+    <!-- Wichtige Infos-->
+    <string name="infos">Wichtige Infos</string>
+    <string name="aemtliplan">Ämtliplan</string>
+    <string name="richtlinien">IT Richtlinien</string>
+    <string name="leifadentitel">Leitfaden</string>
+    <string name="datei"><a href="https://www.blnet.ch/wp-content/uploads/2017/06/RE_IT-Richtlinien_Lernende_V3.0_2011_04_01.pdf">RE_IT-Richtlinien_Lernende</a></string>
+    <string name="leiitfaden"> <a href="https://www.wibilea.ch/extranet/leitfaden/">Neuster Leitfaden auf dem Wibilea Extranet</a></string>
+    <string name="zeitausweis">Zeitausweis</string>
+    <string name="ZeitausweisText">Neu werden die Zeitausweise als digitales PDF-Formular ausgefüllt und in gedruckter Form beim Berufsbildner abgegeben. Sie finden dieses im Wibilea Extranet unter «Allgemein».
+Anbei noch ausgefüllte Beispiele als Hilfe:</string>
+    <string name="bspWibilea"><a href="https://www.blnet.ch/wp-content/uploads/2020/03/VO_Abwesenheitsmeldung_beispiel_blnet.jpg">Beispiel Wibilea</a></string>
+    <string name="bspSyntegon"><a href="https://www.blnet.ch/wp-content/uploads/2020/03/Abwesenheitsmeldung_Syntegon_beispiel.jpg">Beispiel Syntegon</a></string>
+    <string name="kontakte">Wichtige Kontakte</string>
+    <string name="notfall">Im Notfall:</string>
+    <string name="administration">Administration:</string>
+    <string name="sanität">Sanität: +41 52 674 71 44</string>
+    <string name="feuerwehr">Feuerwehr: +41 52 674 71 18</string>
+    <string name="admintext">Betrifft den Bezug von Büromaterial, Unterschreiben von Absenzenheften, Zurückmelden nach Abwesenheit wegen Krankheit o.Ä., allgemeine Fragen, etc.</string>
+    <string name="oeffnung">Öffnungszeiten</string>
+    <string name="morgen">08.00 – 08.45</string>
+    <string name="abend">13.00 – 13.30</string>
+    <string name="lernenden">Zu allen anderen Zeiten werden die Lernenden weggewiesen!</string>
+    <string name="krank">Krankmeldung:</string>
+    <string name="sieben">07.00 Uhr bis spätestens 08.00 Uhr.
+Die Meldung darf nur telefonisch und nicht per E-Mail oder SMS erfolgen.</string>
+    <string name="tel">Telefon: +41 52 674 02 22</string>
+    <string name="arbeitszeiten">Arbeitszeiten</string>
+    <string name="gleitmorgen">07.00 – 07.30	Gleitzeit</string>
+    <string name="pause1">09.15 – 09.30	Pause</string>
+    <string name="arbeitszeit1">09.30 – 12.00	Arbeitszeit</string>
+    <string name="mpause">12.00 – 12.45	Mittagspause</string>
+    <string name="arbeitszeit2">12.45 – 14.40	Arbeitszeit</string>
+    <string name="pause2">14.40 – 14.50	Pause</string>
+    <string name="arbeitszeit3">14.50 – 16.00	Arbeitszeit</string>
+    <string name="gleitabend">16.00 – 16.30	Gleitzeit</string>
+    <string name="uek">Überbetriebliche Kurse</string>
+    <string name="uekz1">7.30 – 12.00</string>
+    <string name="uekz2">12.45 – 16.15</string>
+    <string name="uekt">Die üK-Zeiten können zeitlich variieren. In der üK-Arbeitszeit kann keine Gleitzeit geltend gemacht werden.</string>
+    <string name="zustaendig">Zuständig</string>
+    <string name="kw">Kalenderwochen</string>
+    <string name="ba20">20</string>
+    <string name="ba30">27</string>
+    <string name="ga21">21</string>
+    <string name="ga28">28</string>
+    <string name="hi22">22</string>
+    <string name="hi29">29</string>
+    <string name="pe23">23</string>
+    <string name="pe30">30</string>
+    <string name="ra24">24</string>
+    <string name="ra31">31</string>
+    <string name="us25">25</string>
+    <string name="us32">32</string>
+    <string name="wa26">26</string>
+        <!--Putztag-->
+    <string name="aemtlick">Ämtli</string>
+    <string name="putztag">Putztag</string>
+    <string name="aeschen">Aschenbecher leeren</string>
+    <string name="abfall">Herumliegende Abfälle entsorgen</string>
+    <string name="tische">Tische feucht abgewaschen/getrocknet</string>
+    <string name="baenke">Bänke geputzt und auf Tische gestellt</string>
+    <string name="boden">Bodenreinigung aller Pausenplätze</string>
+    <string name="vollabfall">Abfallbehälter in Hausmüll entleert</string>
+    <string name="mikro">Mikrowellen nach Schmutz überprüfen</string>
+    <string name="checkliste_text_putz">Putztag-Checkliste</string>
 </resources>
