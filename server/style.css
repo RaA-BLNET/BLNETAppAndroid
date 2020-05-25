@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    font-family: "Open Sans", sans-serif;
+}
+th, tr, td {
+    border: 2px black;
+    border-style: solid;
+    border-collapse: collapse;
+}
+table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 3px;
+}
+img {
+    width: 400px;
+}
+.tutorial {
+    width: 600px;
+}
+main {
+    margin-left: 50vh;
+    margin-right: 50vh;
+}
+.code {
+    background-color: #1E1E1E;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.js {
+    color: #FFF57E;
+}
+code {
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+@media (max-width: 1666px) {
+fieldset {
+    display: flex;
+}
+form {
+    display: flex;
+}
+#btndelete, #btnsend {
+    padding-top: 10px;
+}
+main {
+    margin-left: 0vh;
+    margin-right: 0vh;
+}
+img {
+    width: 200px;
+}
+}
