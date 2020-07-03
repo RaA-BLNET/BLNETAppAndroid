@@ -19,7 +19,6 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.blnet.blnettest.ui.checkliste.checklisteFragment;
 import com.blnet.blnettest.ui.pwreset.pwresetActivity;
-import com.blnet.blnettest.ui.register.RegisterActivity;
 import com.blnet.blnettest.ui.login.LoginActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -76,9 +75,6 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.action_login) {
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
-            return true;
-        } else if (id == R.id.action_register) {
-            startActivity(new Intent(MainActivity.this, RegisterActivity.class));
             return true;
         } else if (id == R.id.action_pwreset) {
             startActivity(new Intent(MainActivity.this, pwresetActivity.class));

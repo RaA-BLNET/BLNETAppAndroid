@@ -21,10 +21,6 @@
             android:resource="@color/colorNoti" />
 
         <activity
-            android:name=".ui.register.RegisterActivity"
-            android:label="@string/register"
-            android:parentActivityName=".ui.login.LoginActivity" />
-        <activity
             android:name=".ui.pwreset.pwresetActivity"
             android:label="@string/action_pwreset"
             android:parentActivityName=".ui.login.LoginActivity" />

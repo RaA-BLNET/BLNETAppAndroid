@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/text_checkliste"
+            android:layout_width="340dp"
+            android:layout_height="133dp"
+            android:gravity="center"
+            android:paddingBottom="50dp"
+            android:text="@string/checkliste_text"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/ablagefach"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <CheckBox
+            android:id="@+id/ablagefach"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/checkliste1"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/paketdienst"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <CheckBox
+            android:id="@+id/monitor"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/checkliste2"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <CheckBox
+            android:id="@+id/altpapier"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/checkliste3"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/kuehl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <CheckBox
+            android:id="@+id/drucker"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/checkliste4"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/altpapier"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <CheckBox
+            android:id="@+id/paketdienst"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/checkliste5"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/fenster"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <CheckBox
+            android:id="@+id/kuehl"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/checkliste7"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/monitor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <CheckBox
+            android:id="@+id/fenster"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/checkliste6"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/drucker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="84dp"
+            android:text="@string/aemtlick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.108"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="84dp"
+            android:text="@string/putztag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.888"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/aeschen"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:text="@string/aeschen"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_checkliste"
+            tools:visibility="invisible" />
+
+        <CheckBox
+            android:id="@+id/abfall"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/abfall"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aeschen"
+            tools:visibility="invisible" />
+
+        <CheckBox
+            android:id="@+id/tische"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/tische"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/abfall"
+            tools:visibility="invisible" />
+
+        <CheckBox
+            android:id="@+id/baenke"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/baenke"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tische"
+            tools:visibility="invisible" />
+
+        <CheckBox
+            android:id="@+id/boden"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/boden"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/baenke"
+            tools:visibility="invisible" />
+
+        <CheckBox
+            android:id="@+id/vollabfall"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/vollabfall"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boden"
+            tools:visibility="invisible" />
+
+        <CheckBox
+            android:id="@+id/mikro"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/mikro"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vollabfall"
+            tools:visibility="invisible" />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

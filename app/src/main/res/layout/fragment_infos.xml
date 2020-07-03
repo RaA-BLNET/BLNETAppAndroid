@@ -463,7 +463,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/dateibspw32"
+            android:id="@+id/dateibspw"
             android:layout_width="409dp"
             android:layout_height="26dp"
             android:layout_marginTop="820dp"
@@ -849,7 +849,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/dateibspw"
+            android:id="@+id/dateibspww"
             android:layout_width="409dp"
             android:layout_height="90dp"
             android:layout_marginTop="1800dp"

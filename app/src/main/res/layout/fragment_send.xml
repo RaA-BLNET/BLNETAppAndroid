@@ -74,13 +74,13 @@
             android:id="@+id/notee"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Note-E" />
+            android:text="@string/hintE" />
 
         <RadioButton
             android:id="@+id/notea"
             android:layout_width="138dp"
             android:layout_height="match_parent"
-            android:text="Note-A" />
+            android:text="@string/hintA" />
     </RadioGroup>
 
     <TextView

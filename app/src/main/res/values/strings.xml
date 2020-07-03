@@ -5,11 +5,12 @@
     <string name="navigation_drawer_open">Navigation öffnen</string>
     <string name="navigation_drawer_close">Navigation schliessen</string>
     <string name="nav_header_title">blnet App</string>
-    <string name="nav_header_subtitle">Beta 0.5.0</string>
+    <string name="nav_header_subtitle">Beta 0.5.4</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="error">Fehler</string>
-    <!-- Homepage -->
+    <!-- Startseite -->
     <string name="checklisteintrotext">Herzlich willkommen in der blnet-App. Hier können Sie ihre Schulnoten eintragen, schauen ob man Ämtli/Paketdienst, den BL-Kalender überprüfen, Ämtlis und Putzdienst mit der Checkliste erleichtern und Push-Nachrichten bekommen wenn Sie etwas erleidigen müssen.</string>
+    <string name="bltitel">Teilnehmer: </string>
     <string name="bl1">Alessandro Basile</string>
     <string name="bl2">Nicola Pettikoffer</string>
     <string name="bl3">Till Gasser</string>
@@ -17,12 +18,13 @@
     <string name="bl5">Noel Wangler</string>
     <string name="bl6">Ian Hild</string>
     <string name="bl7">Abeeraam Rahunenthiran</string>
+    <string name="bbtitel">Berufsbildner: </string>
     <string name="br1">Gianni Provenzano</string>
     <string name="br2">Rubén Fructuoso</string>
     <!-- Navigation -->
     <string name="action_login">Anmelden</string>
     <string name="action_register">Registrieren</string>
-    <string name="action_pwreset">Passwort zurücksetzen</string>
+    <string name="action_pwreset">Passwort ändern</string>
     <string name="menu_home">Startseite</string>
     <string name="menu_send">Notenformular</string>
     <string name="menu_infos">Wichtige Infos</string>
@@ -55,19 +57,29 @@
     <string name="pwrnewpass">Neues Passwort</string>
     <string name="pwrnewpassconf">Neues Passwort bestätigen</string>
     <string name="pwnotequal">Passwörter stimmen nicht übereinander</string>
-    <string name="resetbutton">Zurücksetzen</string>
+    <string name="resetbutton">Ändern</string>
     <string name="wrongemailoldpwd">Passwortänderung fehlgeschlagen - Bitte überprüfen Sie die E-Mail Adresse und das alte Passwort</string>
     <string name="neterror">Passwortänderung fehlgeschlagen - Bitte überprüfen Sie ihre Internetverbindung</string>
     <string name="successchange">Das Passwort wurde erfolgreich geändert.</string>
     <!-- Checkliste -->
     <string name="checkliste_text">Ämtli-Checkliste</string>
     <string name="checkliste1">Ablagefach (BACK TO LE)</string>
-    <string name="checkliste2">Monitore, PCs + Flipchart ausschalten</string>
+    <string name="checkliste2">Monitore, PCs + eFlip ausschalten</string>
     <string name="checkliste3">Altpapier entsorgen</string>
     <string name="checkliste4">Druckerpapier nachfüllen</string>
     <string name="checkliste5">Paketdienst</string>
     <string name="checkliste6">Fenster schliessen, Stühle an Tisch</string>
     <string name="checkliste7">Kühlschrank checken</string>
+    <string name="aemtlick">Ämtli</string>
+    <string name="putztag">Putztag</string>
+    <string name="aeschen">Aschenbecher leeren</string>
+    <string name="abfall">Herumliegende Abfälle entsorgen</string>
+    <string name="tische">Tische feucht abgewaschen/getrocknet</string>
+    <string name="baenke">Bänke geputzt und auf Tische gestellt</string>
+    <string name="boden">Bodenreinigung aller Pausenplätze</string>
+    <string name="vollabfall">Abfallbehälter in Hausmüll entleert</string>
+    <string name="mikro">Mikrowellen nach Schmutz überprüfen</string>
+    <string name="checkliste_text_putz">Putztag-Checkliste</string>
     <!-- Kalender -->
     <string name="infocal">Drehen Sie Ihr Handy um den Kalender zu sehen</string>
     <string name="titlecal">Information</string>
@@ -90,6 +102,8 @@
     <string name="nouser">Sie müssen sich anmelden, um das Notenformular benutzen zu können</string>
     <string name="successsend">Das Formular wurde erfolgreich abgeschickt</string>
     <string name="notefail">Das Formular konnte nicht abgeschickt werden. Bitte überprüfen Sie ihre Internetverbindung.</string>
+    <string name="hintA">Note-A</string>
+    <string name="hintE">Note-E</string>
     <string-array name="noten">
         <item>Bitte auswählen*</item>
         <item>Deutsch</item>
@@ -115,7 +129,7 @@
     <string name="noteerror">Bitte die Note eingeben</string>
     <string name="notetypeerror">Bitte wählen</string>
     <string name="begrerror">Eine Begründung ist bei Noten unter 4.0 notwendig</string>
-    <!-- Wichtige Infos-->
+    <!-- Wichtige Infos -->
     <string name="infos">Wichtige Infos</string>
     <string name="aemtliplan">Ämtliplan</string>
     <string name="richtlinien">IT Richtlinien</string>
@@ -138,8 +152,7 @@ Anbei noch ausgefüllte Beispiele als Hilfe:</string>
     <string name="abend">13.00 – 13.30</string>
     <string name="lernenden">Zu allen anderen Zeiten werden die Lernenden weggewiesen!</string>
     <string name="krank">Krankmeldung:</string>
-    <string name="sieben">07.00 Uhr bis spätestens 08.00 Uhr.
-Die Meldung darf nur telefonisch und nicht per E-Mail oder SMS erfolgen.</string>
+    <string name="sieben">07.00 Uhr bis spätestens 08.00 Uhr. Die Meldung darf nur telefonisch und nicht per E-Mail oder SMS erfolgen.</string>
     <string name="tel">Telefon: +41 52 674 02 22</string>
     <string name="arbeitszeiten">Arbeitszeiten</string>
     <string name="gleitmorgen">07.00 – 07.30	Gleitzeit</string>
@@ -170,14 +183,5 @@ Die Meldung darf nur telefonisch und nicht per E-Mail oder SMS erfolgen.</string
     <string name="us32">32</string>
     <string name="wa26">26</string>
         <!--Putztag-->
-    <string name="aemtlick">Ämtli</string>
-    <string name="putztag">Putztag</string>
-    <string name="aeschen">Aschenbecher leeren</string>
-    <string name="abfall">Herumliegende Abfälle entsorgen</string>
-    <string name="tische">Tische feucht abgewaschen/getrocknet</string>
-    <string name="baenke">Bänke geputzt und auf Tische gestellt</string>
-    <string name="boden">Bodenreinigung aller Pausenplätze</string>
-    <string name="vollabfall">Abfallbehälter in Hausmüll entleert</string>
-    <string name="mikro">Mikrowellen nach Schmutz überprüfen</string>
-    <string name="checkliste_text_putz">Putztag-Checkliste</string>
+
 </resources>
